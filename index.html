@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shop Võ Tấn Phú</title>
+<meta name="description" content="Shop Blox Fruit uy tín của Võ Tấn Phú">
+
+<meta property="og:title" content="Shop Võ Tấn Phú">
+<meta property="og:description" content="Shop Cày Thuê Blox Fruit giá rẻ uy tín">
+<meta property="og:image" content="https://sf-static.upanhlaylink.com/img/image_20260528007059e4f77608dbd850c9c84f4184f0.jpg">
+<meta property="og:url" content="https://votanphu-cyber.github.io/Shopvotanphu/shopvotanphu.html">
+
+<link rel="icon" href="https://sf-static.upanhlaylink.com/img/image_20260528007059e4f77608dbd850c9c84f4184f0.jpg">
+<style>
+:root {
+   --link-anh-nen-web: url('https://minhtuanmobile.com/uploads/blog/bo-hinh-nen-dien-thoai-chu-de-one-piece-doc-dao-le-240428034746.jpg');
+   --link-anh-goi-cay: url('https://cdn3.upanh.info/upload/server-sw3/images/Cay%20Thue%20Blox%20Fruit.png');
+
+   --link-nhom-zalo: 'linkzalo';
+   --link-discord: 'https://discord.gg/UNCCWVV52';
+
+   --link-chat-zalo-ca-nhan: 'https://zalo.me';
+   --link-facebook: 'https://facebook.com';
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background-image:var(--link-anh-nen-web);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    padding-bottom:50px;
+}
+
+nav{
+    background:rgba(31,41,55,.95);
+    border-bottom:1px solid #374151;
+    padding:15px 20px;
+    position:sticky;
+    top:0;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:900;
+    color:#f59e0b;
+    animation:lac .2s infinite;
+}
+
+@keyframes lac{
+    0%{transform:translateX(0);}
+    25%{transform:translateX(-3px);}
+    50%{transform:translateX(3px);}
+    100%{transform:translateX(0);}
+}
+
+.menu-links{
+    display:flex;
+    gap:20px;
+}
+
+.menu-links a{
+    color:white;
+    text-decoration:none;
+}
+
+main{
+    max-width:1200px;
+    margin:auto;
+    padding:30px 15px;
+}
+
+.header-section{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.header-section h2{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.alert-box{
+    background:rgba(17,24,39,.85);
+    padding:20px;
+    border-radius:12px;
+    line-height:1.6;
+    max-width:900px;
+    margin:auto;
+}
+
+.category-title{
+    font-size:25px;
+    color:#f59e0b;
+    margin:40px 0 20px;
+    border-left:5px solid red;
+    padding-left:10px;
+    text-transform:uppercase;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:rgba(31,41,55,.9);
+    border:1px solid #374151;
+    border-radius:12px;
+    padding:12px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    border-color:#f59e0b;
+    transform:scale(1.03);
+}
+
+.img-placeholder{
+    width:100%;
+    height:120px;
+    border-radius:8px;
+    background-image:var(--link-anh-goi-cay);
+    background-size:cover;
+    background-position:center;
+}
+
+.card-title{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.card-price{
+    color:#ef4444;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.card-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#dc2626;
+    color:white;
+    cursor:pointer;
+}
+
+.card-btn:hover{
+    background:#b91c1c;
+}
+.about-section{
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    padding: 50px 20px;
+    margin-top: 50px;
+    border-top: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+}
+
+.about-logo img{
+    width:120px;
+    height:auto;
+    display:block;
+    margin:auto;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
+/* POPUP ĐẸP */
+
+.popup-overlay{
+   display:none;
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   background:rgba(0,0,0,.65);
+   justify-content:center;
+   align-items:center;
+   z-index:99999;
+   padding:15px;
+}
+
+.auth-box{
+   width:100%;
+   max-width:430px;
+   background:#fff;
+   border-radius:16px;
+   padding:35px 30px;
+   position:relative;
+   animation:popupShow .25s ease;
+   box-shadow:0 10px 40px rgba(0,0,0,.4);
+}
+
+@keyframes popupShow{
+   from{
+      transform:scale(.9);
+      opacity:0;
+   }
+   to{
+      transform:scale(1);
+      opacity:1;
+   }
+}
+
+.close-popup{
+   position:absolute;
+   top:14px;
+   right:14px;
+   width:34px;
+   height:34px;
+   border-radius:50%;
+   background:#222;
+   color:#fff;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   cursor:pointer;
+   font-size:15px;
+   font-weight:bold;
+}
+
+.auth-logo{
+   width:90px;
+   display:block;
+   margin:auto;
+   margin-bottom:15px;
+}
+
+.auth-box h2{
+   text-align:center;
+   color:#00a896;
+   font-size:34px;
+   font-weight:800;
+   margin-bottom:20px;
+}
+
+.auth-alert{
+   background:#ffe5e5;
+   color:#ff3b3b;
+   padding:14px;
+   border-radius:8px;
+   margin-bottom:18px;
+   font-size:15px;
+   border:1px solid #ffb8b8;
+}
+
+.auth-box label{
+   display:block;
+   color:#222;
+   margin-bottom:6px;
+   margin-top:14px;
+   font-weight:700;
+}
+
+.auth-box input{
+   width:100%;
+   height:50px;
+   border:2px solid #355cff;
+   border-radius:8px;
+   padding:0 14px;
+   outline:none;
+   font-size:16px;
+   transition:.2s;
+}
+
+.auth-box input:focus{
+   border-color:#ff4343;
+}
+
+.auth-main-btn{
+   width:100%;
+   height:52px;
+   border:none;
+   background:#ff4343;
+   color:#fff;
+   font-size:18px;
+   font-weight:800;
+   border-radius:8px;
+   margin-top:20px;
+   cursor:pointer;
+}
+
+.auth-main-btn:hover{
+   background:#eb2f2f;
+}
+
+.auth-switch-btn{
+   width:100%;
+   height:52px;
+   border:1px solid #ccc;
+   background:#fff;
+   color:#222;
+   font-size:18px;
+   font-weight:700;
+   border-radius:8px;
+   margin-top:10px;
+   cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">Võ Tấn Phú</div>
+
+        <div class="menu-links">
+            <a href="#">Trang chủ</a>
+            <a href="#" id="login-btn" onclick="window.openAuth('login')">Đăng nhập</a>
+            <span id="so-du" style="display:none;color:yellow;">💰 0đ</span>
+            <a href="#" onclick="window.openAuth('register')">Đăng kí</a>
+            <a href="#">Nạp thẻ</a>
+            <a href="#">Lịch sử cày thuê</a>
+            <a id="menu-zalo" href="#" target="_blank">Nhóm Zalo</a>
+            <a id="menu-discord" href="#" target="_blank">Discord</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+<div class="header-section">
+    <h1>DỊCH VỤ CÀY THUÊ BLOX FRUIT</h1>
+
+    <div class="alert-box">
+        <p><b>⚠️ Lưu ý:</b></p>
+        <p><b>⚠️ Lưu ý cày thuê:</b> Tắt xác minh 2 bước, gắn email và không đăng nhập trong lúc shop đang cày.</p>
+    </div>
+</div>
+
+<div class="category-title">Dịch vụ cày thuê Blox Fruit</div>
+
+<h2 class="category-title">Farm Lv/Beli-F/Mastery</h2>
+<div class="grid-container">
+
+<div class="card">
+    <div class="img-placeholder"></div>
+    <div class="card-title">Farm Lv 1-700</div>
+    <div class="card-req">Không yêu cầu</div>
+    <div class="card-price">40k Card</div>
+    <button class="card-btn">Mua Ngay</button>
+</div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Farm lv 700-1500</div><div class="card-req">Không yêu cầu</div><div class="card-price">60k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Farm lv 1500 lên lv max</div><div class="card-req">Không yêu cầu</div><div class="card-price">90k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Farm lv 1 - lv max</div><div class="card-req">Không yêu cầu</div><div class="card-price">180k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">500mas Dragon Heart</div><div class="card-req">Không yêu cầu</div><div class="card-price">30k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">500mas Dragon Storm</div><div class="card-req">Không yêu cầu</div><div class="card-price">50k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">600mas súng hoặc trái</div><div class="card-req">yeucau trên lv 1500 + đổi qua thứ mà bạn muốn cày rồi mới đặt đơn</div><div class="card-price">60k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">600mas melee hoặc kiếm</div><div class="card-req">yeucau trên lv 1500 + đổi qua thứ bạn muốn cày rồi mới đặt đơn</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Cày full chiêu súng hoặc trái</div><div class="card-req">đổi qua thứ bạn muốn cày rồi mới đặt đơn</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Cày full chiêu melee hoặc kiếm</div><div class="card-req">đổi qua thứ bạn muốn cày rồi mới đặt đơn</div><div class="card-price">30k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">5m beli [nếu có x2 beli là 10m]</div><div class="card-req">yeucau trên lv 1500</div><div class="card-price">30k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">20m beli [nếu có x2 beli là 40m]</div><div class="card-req">yeucau trên lv 1500</div><div class="card-price">50k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">10k f</div><div class="card-req">yeucau trên lv 1500</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+</div>
+
+<h2 class="category-title">Melee</h2>
+<div class="grid-container">
+
+<div class="card">
+   <div class="img-placeholder"></div>
+   <div class="card-title">GodHuman từ A-Z</div>
+   <div class="card-req">Không yêu cầu</div>
+   <div class="card-price">140k Card</div>
+   <button class="card-btn">Mua Ngay</button>
+</div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Super Human</div><div class="card-req">Không yêu cầu</div><div class="card-price">20k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Sharkman Karate</div><div class="card-req">Không yêu cầu</div><div class="card-price">20k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Death Step</div><div class="card-req">Không yêu cầu</div><div class="card-price">20k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Electric Claw</div><div class="card-req">Không yêu cầu</div><div class="card-price">20k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Dragon Talon</div><div class="card-req">Không yêu cầu</div><div class="card-price">20k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Dragon Talon v3</div><div class="card-req">Không yêu cầu</div><div class="card-price">80k card</div><button class="card-btn">Mua Ngay</button></div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">God human</div><div class="card-req">yeucau all melee v2 400mas</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+</div>
+
+<h2 class="category-title">Item</h2>
+<div class="grid-container">
+
+<div class="card">
+    <div class="img-placeholder"></div>
+    <div class="card-title">Mảnh Gương</div>
+    <div class="card-req">Không yêu cầu</div>
+    <div class="card-price">40k card</div>
+    <button class="card-btn">Mua Ngay</button>
+</div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Đánh Rip-indra</div><div class="card-req">yeucau trên lv 1500</div><div class="card-price">50k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Tushita</div><div class="card-req">yeucau trên lv 2300</div><div class="card-price">50k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Yama</div><div class="card-req">yeucau trên lv 1500</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Song Kiếm (Tushita + yama)</div><div class="card-req">Không yêu cầu</div><div class="card-price">120k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Foxlamp</div><div class="card-req">yeucau trên lv 2300</div><div class="card-price">80k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Soul guitar</div><div class="card-req">yeucau trên lv 2300</div><div class="card-price">60k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Tam Kiếm</div><div class="card-req">yeucau trên lv 1500 + đủ 6m beli</div><div class="card-price">70k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Lấy 1 trong Wando,Saddi,Shisui</div><div class="card-req">Không yêu cầu</div><div class="card-price">20k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Mỏ neo</div><div class="card-req">nếu bạn đã có nam châm</div><div class="card-price">40k</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Mỏ neo a-z</div><div class="card-req">yeucau trên lv 2600</div><div class="card-price">60k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Dragon Storm</div><div class="card-req">yeucau có đủ 8 đai</div><div class="card-price">80k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Dragon Heart</div><div class="card-req">yeucau có đủ 8 đai</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Yoru [Dark Blade] V3</div><div class="card-req">4 tộc cơ bản v3 + Yoru v2</div><div class="card-price">100k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Lấy Full đồ ở đảo Kitsune</div><div class="card-req">yeucau trên lv 1500 trở lên</div><div class="card-price">120k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Haki Rainbow</div><div class="card-req">Không yêu cầu</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Đánh boss tiki</div><div class="card-req">yeucau trên lv 2600-max</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Đánh râu đen</div><div class="card-req">Không yêu cầu</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Mini yoru</div><div class="card-req">yeucau đã lên sea 3</div><div class="card-price">500k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Áo choàng râu đen</div><div class="card-req">yeucau trên lv 1000</div><div class="card-price">500k card</div><button class="card-btn">Mua Ngay</button></div>
+
+</div>
+
+<h2 class="category-title">Race</h2>
+<div class="grid-container">
+
+<div class="card">
+   <div class="img-placeholder"></div>
+   <div class="card-title">Gạt Cần</div>
+   <div class="card-req">yêu cầu có mảnh gương</div>
+   <div class="card-price">20k card</div>
+   <button class="card-btn">Mua Ngay</button>
+</div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">1 Gear V4</div><div class="card-req">Yeucau đủ f</div><div class="card-price">20k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Full Gear V4</div><div class="card-req">yeucau đủ f</div><div class="card-price">100k</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Trial 5/5 giúp duy trì tộc V4 lâu hơn</div><div class="card-req">yeucau đã full gear và đủ 20k f</div><div class="card-price">30k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Full Gear + Gạt cần</div><div class="card-req">mảnh gương + mũ admin + v3 + đủ 10k f</div><div class="card-price">120k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Lấy tộc Cyborg</div><div class="card-req">free v3, lv max + có sẵn 10k f</div><div class="card-price">50k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Lấy tộc Ghoul</div><div class="card-req">yeucau trên lv 1500</div><div class="card-price">50k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Lấy 1 trong 6 tộc thường</div><div class="card-req">yeucau trên lv 1300 + đủ 2m5</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+</div>
+
+<h2 class="category-title">Question % Race Draco</h2>
+<div class="grid-container">
+
+<div class="card">
+   <div class="img-placeholder"></div>
+   <div class="card-title">1 đai</div>
+   <div class="card-req">dragon talon trên 500mas</div>
+   <div class="card-price">30k card</div>
+   <button class="card-btn">Mua Ngay</button>
+</div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">8 đai</div><div class="card-req">trên lv 2300 + dragon talon 500mas</div><div class="card-price">200k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Tộc Draco v1-v2</div><div class="card-req">Không yêu cầu</div><div class="card-price">30k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Up tộc Draco v1-v3</div><div class="card-req">có sẵn v1 + đủ 4m + haki 7 màu</div><div class="card-price">50k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">1 Gear Draco</div><div class="card-req">đã kéo tim về hydra</div><div class="card-price">20k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Full Gear Draco</div><div class="card-req">đã kéo tim sẵn về hydra</div><div class="card-price">100k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">5 Gear Draco + Trial 5/5 + bao f</div><div class="card-req">đã kéo tim về Hydra</div><div class="card-price">160k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">5 Gear Draco + Trial 5/5 + 25k f</div><div class="card-req">Không yêu cầu</div><div class="card-price">120k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">1 trứng + 5-8 xương</div><div class="card-req">có đủ 8 đai</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Combo Lấy Full Tộc Draco từ A-Z</div><div class="card-req">khi đã có sẵn 8 đai</div><div class="card-price">400k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Dino hood</div><div class="card-req">yeucau có đai đen</div><div class="card-price">100k card</div><button class="card-btn">Mua Ngay</button></div>
+
+</div>
+
+<h2 class="category-title">Levi</h2>
+<div class="grid-container">
+
+<div class="card">
+   <div class="img-placeholder"></div>
+   <div class="card-title">15 vảy</div>
+   <div class="card-req">random tim + lv gần max + nâng max điểm máu</div>
+   <div class="card-price">70k card</div>
+   <button class="card-btn">Mua Ngay</button>
+</div>
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Khiên levi</div><div class="card-req">lv gần max + nâng max điểm máu</div><div class="card-price">150k</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Thuyền Băng</div><div class="card-req">lv gần max + nâng max điểm máu</div><div class="card-price">100k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Làm mất idk để đặt đơn tim</div><div class="card-req">Không yêu cầu</div><div class="card-price">40k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Kéo tim về tiki</div><div class="card-req">lv gần max + nâng max điểm máu</div><div class="card-price">60k card</div><button class="card-btn">Mua Ngay</button></div>
+
+<div class="card"><div class="img-placeholder"></div><div class="card-title">Kéo tim về Hydra</div><div class="card-req">kiếm-súng mới trên 500mas + rồng v3</div><div class="card-price">60k</div><button class="card-btn">Mua Ngay</button></div>
+</div>
+</main>
+<section class="about-section">
+    <div class="about-box">
+
+        <div class="about-logo">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202605262b12f14296327ab1adb5ccfd54506ef2.jpg" alt="Logo Shop">
+            <h3>DỊCH VỤ CÀY THUÊ SIÊU RẺ</h3>
+        </div>
+
+        <div class="about-text">
+            <h2>VỀ CHÚNG TÔI</h2>
+            <p>
+                Chúng tôi chuyên cung cấp dịch vụ cày thuê Blox Fruit uy tín,
+                nhanh chóng và chất lượng cao. Cam kết mang đến trải nghiệm tốt nhất cho khách hàng.
+            </p>
+            <p>
+                ⏰ Thời gian làm việc:<br>
+                08:00 - 23:00 mỗi ngày
+            </p>
+        </div>
+
+        <div class="about-text">
+            <h2>DỊCH VỤ CÀY THUÊ SIÊU RẺ</h2>
+            <p>
+                Đảm bảo uy tín - chất lượng - nhanh chóng.<br>
+                Hỗ trợ khách hàng 24/7, giá tốt nhất thị trường.
+            </p>
+        </div>
+
+    </div>
+</section>
+<button id="login-btn" class="auth-main-btn">
+   Đăng nhập
+</button>
+
+<div id="login-popup" class="popup-overlay">
+
+  <div class="auth-box">
+
+      <span class="close-popup" onclick="closePopup()">✖</span>
+
+      <img
+     class="auth-logo"
+     src="https://sf-static.upanhlaylink.com/img/image_202605262b12f14296327ab1adb5ccfd54506ef2.jpg"
+     alt="Logo Shop">
+      <h2>THÔNG BÁO</h2>
+
+      <div class="auth-alert">
+         Bạn cần đăng nhập để mua dịch vụ!
+      </div>
+
+      <button onclick="openAuth()" class="auth-main-btn">
+         ĐĂNG NHẬP
+      </button>
+
+  </div>
+
+</div>
+
+<div id="auth-popup" class="popup-overlay">
+
+  <div class="auth-box">
+
+      <span class="close-popup" onclick="window.closeAuth()">✖</span>
+
+     <img
+     class="auth-logo"
+     src="https://sf-static.upanhlaylink.com/img/image_202605262b12f14296327ab1adb5ccfd54506ef2.jpg"
+     alt="Logo Shop">
+
+<h2 id="auth-title">ĐĂNG NHẬP</h2>
+
+<label>Tài khoản *</label>
+<input
+id="auth-user"
+type="text"
+placeholder="Nhập tài khoản...">
+
+<label>Mật khẩu *</label>
+
+<div style="position:relative;">
+
+   <input
+   id="auth-pass"
+   type="password"
+   placeholder="Nhập mật khẩu...">
+
+   <span
+   onclick="window.togglePassword('auth-pass',this)"
+   style="
+   position:absolute;
+   right:15px;
+   top:50%;
+   transform:translateY(-50%);
+   cursor:pointer;
+   color:#333;
+   ">
+   👁
+   </span>
+
+</div>
+<p id="auth-error" style="
+color:red;
+font-size:14px;
+margin-top:10px;
+display:none;
+"></p>
+
+<div id="repass-box" style="display:none;">
+
+   <label>Xác nhận mật khẩu *</label>
+
+   <div style="position:relative;">
+
+      <input
+      id="auth-repass"
+      type="password"
+      placeholder="Nhập lại mật khẩu...">
+
+      <span
+      onclick="window.togglePassword('auth-repass',this)"
+      style="
+      position:absolute;
+      right:15px;
+      top:50%;
+      transform:translateY(-50%);
+      cursor:pointer;
+      color:#333;
+      ">
+      👁
+      </span>
+
+   </div>
+
+</div>
+
+<button id="auth-submit" class="auth-main-btn">
+   XÁC NHẬN
+</button>
+
+<button class="auth-switch-btn">
+   CHUYỂN ĐĂNG KÝ / ĐĂNG NHẬP
+</button>
+  </div>
+
+</div>
+<div id="user-money" style="display:none;
+position:fixed;
+top:20px;
+right:20px;
+background:#16a34a;
+padding:10px 20px;
+border-radius:10px;
+font-weight:bold;
+z-index:9999;">
+💰 0đ
+</div>
+
+<script type="module">
+   import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+  browserLocalPersistence,
+  setPersistence
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCjud3H413lo7Lmd4-zy-syXjFOURcmiqI",
+  authDomain: "shop-bloxfruitcuaphu.firebaseapp.com",
+  projectId: "shop-bloxfruitcuaphu",
+  storageBucket: "shop-bloxfruitcuaphu.firebasestorage.app",
+  messagingSenderId: "799258673483",
+  appId: "1:799258673483:web:45117a888fd6ce0ab9e8ce"
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+await setPersistence(auth, browserLocalPersistence);
+
+auth.useDeviceLanguage();
+
+let daDangNhap = false;
+let dangDangKy = false;
+
+
+// =======================
+// POPUP
+// =======================
+
+window.closePopup = function(){
+   document.getElementById("login-popup").style.display = "none";
+};
+
+window.openAuth = function(mode="login"){
+
+   window.closePopup();
+
+   document.getElementById("auth-popup").style.display = "flex";
+
+   let title = document.getElementById("auth-title");
+   let repass = document.getElementById("repass-box");
+
+   if(mode === "register"){
+
+      dangDangKy = true;
+
+      title.innerText = "ĐĂNG KÝ";
+
+      repass.style.display = "block";
+
+   }else{
+
+      dangDangKy = false;
+
+      title.innerText = "ĐĂNG NHẬP";
+
+      repass.style.display = "none";
+
+   }
+
+};
+
+window.closeAuth = function(){
+   document.getElementById("auth-popup").style.display = "none";
+};
+
+window.doiCheDo = function(){
+
+   dangDangKy = !dangDangKy;
+
+   document.getElementById("auth-title").innerText =
+   dangDangKy ? "ĐĂNG KÝ" : "ĐĂNG NHẬP";
+
+   document.getElementById("repass-box").style.display =
+   dangDangKy ? "block" : "none";
+
+   window.hideError();
+
+};
+
+// =======================
+// HIỆN / ẨN PASSWORD
+// =======================
+
+window.togglePassword = function(id,el){
+
+   let input = document.getElementById(id);
+
+   if(input.type === "password"){
+
+      input.type = "text";
+      el.innerText = "🙈";
+
+   }else{
+
+      input.type = "password";
+      el.innerText = "👁";
+
+   }
+
+};
+
+// =======================
+// ERROR
+// =======================
+
+window.showError = function(text){
+
+   let err = document.getElementById("auth-error");
+
+   err.innerText = text;
+   err.style.display = "block";
+
+};
+
+window.hideError = function(){
+
+   let err = document.getElementById("auth-error");
+
+   err.innerText = "";
+   err.style.display = "none";
+
+};
+
+// =======================
+// ĐĂNG KÝ / ĐĂNG NHẬP
+// =======================
+
+window.xuLyAuth = async function(){
+
+   window.hideError();
+
+   let errorBox = document.getElementById("auth-error");
+
+   errorBox.style.color = "red";
+
+   let username = document
+      .getElementById("auth-user")
+      .value
+      .trim()
+      .toLowerCase();
+
+   let pass = document
+      .getElementById("auth-pass")
+      .value
+      .trim();
+
+   let repass = document
+      .getElementById("auth-repass")
+      .value
+      .trim();
+
+   let email = username + "@shop.com";
+
+   if(username === "" || pass === ""){
+
+      window.showError("Nhập đầy đủ tài khoản và mật khẩu");
+      return;
+
+   }
+
+   // =======================
+   // ĐĂNG KÝ
+   // =======================
+
+   if(dangDangKy){
+
+      if(repass === ""){
+
+         window.showError("Nhập xác nhận mật khẩu");
+         return;
+
+      }
+
+      if(pass !== repass){
+
+         window.showError("Mật khẩu nhập lại không đúng");
+         return;
+
+      }
+
+      try{
+
+         const userCredential =
+         await createUserWithEmailAndPassword(
+            auth,
+            email,
+            pass
+         );
+
+         await setDoc(
+            doc(db,"users",userCredential.user.uid),
+            {
+               soDu: 0
+            }
+         );
+
+         errorBox.style.color = "lime";
+
+         window.showError("Đăng ký thành công!");
+
+         setTimeout(()=>{
+
+            window.closeAuth();
+            location.reload();
+
+         },1200);
+
+      }catch(err){
+
+         console.log(err);
+
+         if(err.code === "auth/email-already-in-use"){
+
+            window.showError("Tài khoản đã tồn tại");
+
+         }
+         else if(err.code === "auth/weak-password"){
+
+            window.showError("Mật khẩu phải từ 6 ký tự");
+
+         }
+         else{
+
+            window.showError(err.message);
+
+         }
+
+      }
+
+   }
+
+   // =======================
+   // ĐĂNG NHẬP
+   // =======================
+
+   else{
+
+      try{
+
+         await signInWithEmailAndPassword(
+            auth,
+            email,
+            pass
+         );
+
+         console.log("LOGIN SUCCESS");
+
+         errorBox.style.color = "lime";
+
+         window.showError("Đăng nhập thành công!");
+
+         setTimeout(()=>{
+
+            window.closeAuth();
+
+         },500);
+
+         setTimeout(()=>{
+
+            location.reload();
+
+         },1200);
+
+      }catch(err){
+
+         console.log(err);
+
+         if(
+            err.code === "auth/invalid-credential" ||
+            err.code === "auth/wrong-password" ||
+            err.code === "auth/user-not-found"
+         ){
+
+            window.showError("Sai tài khoản hoặc mật khẩu");
+
+         }
+         else{
+
+            window.showError(err.message);
+
+         }
+
+      }
+
+   }
+
+};
+
+// =======================
+// ĐĂNG XUẤT
+// =======================
+
+window.dangXuat = function(){
+   signOut(auth);
+};
+
+// =======================
+// KIỂM TRA LOGIN
+// =======================
+
+onAuthStateChanged(auth, async(user)=>{
+
+   let tien = document.getElementById("user-money");
+   let btn = document.getElementById("login-btn");
+   if(!btn){
+   console.log("KHÔNG TÌM THẤY login-btn");
+   return;
+}
+
+   if(user){
+
+      daDangNhap = true;
+
+      btn.innerText =
+      user.email.replace("@shop.com","");
+
+      btn.onclick = function(){
+         window.dangXuat();
+      };
+
+      tien.style.display = "inline";
+
+      try{
+
+         let ref = doc(db,"users",user.uid);
+
+         let snap = await getDoc(ref);
+
+         if(!snap.exists()){
+
+            await setDoc(ref,{
+               soDu:0
+            });
+
+            tien.innerText = "💰 0đ";
+
+         }else{
+
+            let data = snap.data();
+
+            tien.innerText =
+            "💰 " + (data.soDu || 0) + "đ";
+
+         }
+
+      }catch(err){
+
+         console.log(err);
+
+         tien.innerText = "💰 0đ";
+
+      }
+
+   }else{
+
+      daDangNhap = false;
+
+      btn.innerText = "Đăng nhập";
+
+      btn.onclick = function(){
+         window.openAuth("login");
+      };
+
+      tien.style.display = "none";
+
+   }
+
+});
+
+// =======================
+// BUTTON
+// =======================
+
+document
+.getElementById("auth-submit")
+.addEventListener("click", function(e){
+
+   e.preventDefault();
+
+   window.xuLyAuth();
+
+});
+
+document
+.querySelector(".auth-switch-btn")
+.addEventListener("click", function(e){
+
+   e.preventDefault();
+
+   window.doiCheDo();
+
+});
+
+// =======================
+// NÚT MUA NGAY
+// =======================
+
+document.querySelectorAll(".card-btn").forEach(btn=>{
+
+   btn.addEventListener("click",function(e){
+
+      if(!daDangNhap){
+
+         e.preventDefault();
+
+         document.getElementById("login-popup")
+         .style.display = "flex";
+
+      }
+
+   });
+
+});
+
+console.log("SCRIPT OK");
+
+</script>
+</body>
+</html>
